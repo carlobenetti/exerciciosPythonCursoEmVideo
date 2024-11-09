@@ -1,26 +1,9 @@
-varComposta = ('Hamburquer', 'Suco', 'Pizza', 'Pudim')
-
-
-# Utilizar dos valores de um contador como valor de posição dentro da variável composta:
-
+c = (5, 2, 4, 9, 11, 6, 0, 1, 5, 6)
 """
-dcascasca
+O index serve para encontrarmos a posição de algum elemento. O primeiro argumento representa o valor que desejo encontrar a posição. O segundo argumento serve para eu definir a partir de qual posição que quero começar a procurar pelo valor.
+No caso abaixo, eu desejo procurar a posição do segundo valor 5 na tupla. Assim eu peço para o computador procurar a partir do segundo elemento (1)
 """
-
-for cont in range(0, len(varComposta)):
-    print(f'Vou comer {varComposta[cont]} na posição {cont}')
-
-
-
-
-for pos, comida in enumerate(varComposta):
-    print(f'Eu vou comer {comida} na posição {pos}')
-
-
-
-
-
-
+print(c.index(5, 1))
 
 
 
