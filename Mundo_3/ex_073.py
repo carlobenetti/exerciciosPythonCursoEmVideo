@@ -20,10 +20,9 @@ print('')
 
 
 # Pegando as últimas 5 posições e seus nomes:
-last_five = [(index + 1, name) for index, name in enumerate(campeoes) if index >= len(campeoes) - 5]
 
-print(last_five)
-
-
-
+for i in range(0, 5):
+    ultimosColocados = campeoes[-i-1]
+    posicao = campeoes.index(ultimosColocados)
+    print(f'{ultimosColocados} ficou em {posicao + 1}° lugar')
 
