@@ -1,8 +1,8 @@
 # Crie uma tupla com os 20 primeiros colocados da Tabela do Campeonato Brasileiro,na ordem de colocação. Depois mostre:
 # (X) Apenas os 5 primeiros colocados.
 # (X) Os últimos 4 colocados.
-# () Uma lista com os times em ordem alfabética.
-# () Mostre a posição do Grêmio.
+# (X) Uma lista com os times em ordem alfabética.
+# (X) Mostre a posição do Coritiba.
 
 
 campeoes = ("Flamengo",    "Internacional",    "Atlético-MG",    "Grêmio",    "Fluminense",    "São Paulo",    "Palmeiras",    "Santos",    "Athletico-PR",    "Bragantino",    "Ceará",    "Corinthians",    "Atlético-GO",    "Bahia",    "Sport",    "Fortaleza",    "Vasco",    "Goiás",    "Coritiba",    "Botafogo",)
@@ -37,9 +37,6 @@ for x in range(len(campeoes)):
         print(campeoes[x], end='.')
         
         
-
-
-
 
 # Exibindo a posição do Coritiba.
 print('')
