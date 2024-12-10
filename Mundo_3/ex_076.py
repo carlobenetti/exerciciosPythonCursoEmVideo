@@ -23,16 +23,17 @@ lista_mercado = (
     'Alface', 2.0
 )
 
-
-even_values = lista_mercado[1::2]
 odd_values = lista_mercado[0::2]
+even_values = lista_mercado[1::2]
 
 
 for i in range(0, len(even_values)):
     print(f'{odd_values[i]}...........{even_values[i]}')
     
-    
-    
+print(f'{32*'-'}')
+print(f'Total.............{sum(even_values)}')
+
+
 
 
 
