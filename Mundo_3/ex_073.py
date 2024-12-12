@@ -23,8 +23,6 @@ for i in range(0, 5):
     print(f'{ultimosColocados} ficou em {posicao + 1}° lugar')
 
 
-
-
 # Exibindo a tupla em ordem alfabética.
 print('')
 print('')
@@ -48,3 +46,7 @@ for i in campeoes:
         print(f'O Coritiba ficou em {posicao_coritiba - 1}° lugar.')    
     
     
+    
+
+
+
