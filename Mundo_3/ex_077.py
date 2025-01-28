@@ -3,3 +3,14 @@
 # palavras = ('Programar', 'Mercado')
 # >>> Na palavra Programar temos as vogais a o
 # >>> Na palavra Mercado temos as vogais a e o
+
+
+palavras = ['programar', 'mercado']
+
+for i in palavras:
+    for x in i:
+        print(x)
+        
+        
+    
+    
