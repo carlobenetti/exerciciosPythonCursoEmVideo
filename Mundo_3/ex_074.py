@@ -7,20 +7,10 @@ e também indique o menor e o maior valor que estão na tupla
 
 from random import randint
 
+numeros = (randint(1, 10), randint(1, 10), randint(1, 10), randint(1, 10), randint(1, 10))
 
-tupla = []
-counter = 0
-
-while counter < 5:
-    tupla.append(randint(0, 100))
-    counter += 1
-
-sortBiggest = sorted(tupla)
-
-print(f'O maior é {sortBiggest[0]} e o menor é {sortBiggest[-1]}')
+print(f'O maior valor da tupla foi {max(numeros)} e o menor {min(numeros)}')
 
 
 
-
-print(tupla)
 

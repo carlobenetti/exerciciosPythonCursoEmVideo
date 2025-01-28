@@ -26,6 +26,11 @@ while continuar == 0:
     print(f'Você digitou o número: {tupla[num]}')
     continuar = int(input('Você quer continuar? Sim [0] ou não [1]: '))
 
+print(f'Fim do programa')
+
+
+
+
 
 
 
