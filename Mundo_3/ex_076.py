@@ -23,18 +23,17 @@ lista_mercado = (
     'Alface', 2.0
 )
 
-odd_values = lista_mercado[0::2]
-even_values = lista_mercado[1::2]
 
+print(30*'-')
 
-for i in range(0, len(even_values)):
-    print(f'{odd_values[i]}...........{even_values[i]}')
-    
-print(f'{32*'-'}')
-print(f'Total.............{sum(even_values)}')
-
-
-
+# Exibição da tabela
+for pos in range(0, len(lista_mercado)):
+    if pos % 2 == 0:
+        print(f'{lista_mercado[pos]:.<30}', end='')
+    else:
+        print(f'R${lista_mercado[pos]:>6}')
+        
+        
 
 
 
