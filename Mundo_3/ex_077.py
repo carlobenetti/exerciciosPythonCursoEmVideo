@@ -11,6 +11,9 @@ for p in palavras:
     for letra in p:
         if letra in 'aeiou':
             print(letra, end='')
+            
+            
+
     
         
     

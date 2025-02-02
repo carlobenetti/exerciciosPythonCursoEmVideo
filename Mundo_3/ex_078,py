@@ -1,0 +1,19 @@
+# Um Programa que leia 5 valores e guardeos em uma lista.
+# [] Mostrar qual foi o maior e menor valor junto a suas posições na lista.
+
+from random import randint
+
+
+lista = []
+
+for i in range(0, 5):
+    lista.append(randint(0, 100))
+    
+
+    
+print(f'ITEMS DA LISTA: {lista}\n O maior valor foi {max(lista)} na posição {lista.index(max(lista))+1},\n e o menor foi valor foi {min(lista)} na posição {lista.index(min(lista))+1}.')
+
+
+
+
+
