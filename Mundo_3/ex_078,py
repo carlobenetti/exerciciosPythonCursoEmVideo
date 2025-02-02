@@ -4,16 +4,36 @@
 from random import randint
 
 
-lista = []
+lista = [0, 3, 2, 3]
+maiorNumero = lista[0]
+menorNumero = lista[0]
+posMaior = []
+posMenor = []
 
-for i in range(0, 5):
-    lista.append(randint(0, 100))
+
+for maior in lista:
+    if maior > maiorNumero:
+        maiorNumero = maior
     
+for menor in lista:
+    if menor < menorNumero:
+        menorNumero = menor
 
-    
-print(f'ITEMS DA LISTA: {lista}\n O maior valor foi {max(lista)} na posição {lista.index(max(lista))+1},\n e o menor foi valor foi {min(lista)} na posição {lista.index(min(lista))+1}.')
 
 
+print(lista)
+
+print(f'Menor número: {menorNumero}\nPosição na lista: ', end='')
+# Pegando a posição do menor número de uma lista.
+for pos, v in enumerate(lista):
+    if v == menorNumero:
+        print(f'{pos+1}', end='...')
+        
+print(f'\nMaior número: {maiorNumero}\nPosição na lista: ', end='')
+# Pegando a posição do maior número de uma lista.
+for pos, vMaiores in enumerate(lista):
+    if vMaiores == maiorNumero:
+        print(f'{pos+1}', end='...')
 
 
 
