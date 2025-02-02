@@ -4,13 +4,13 @@
 # >>> Na palavra Programar temos as vogais a o
 # >>> Na palavra Mercado temos as vogais a e o
 
+palavras = ('aprender', 'programar', 'linguagem', 'python', 'curso')
 
-palavras = ['programar', 'mercado']
-
-for i in palavras:
-    for x in i:
-        print(x)
-        
-        
+for p in palavras:
+    print(f'\nNa palavra {p} temos ', end='')
+    for letra in p:
+        if letra in 'aeiou':
+            print(letra, end='')
     
+        
     
