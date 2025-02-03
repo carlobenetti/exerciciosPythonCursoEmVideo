@@ -27,13 +27,13 @@ print(f'Menor número: {menorNumero}\nPosição na lista: ', end='')
 # Pegando a posição do menor número de uma lista.
 for pos, v in enumerate(lista):
     if v == menorNumero:
-        print(f'{pos+1}', end='...')
+        print(f'{pos}', end='...')
         
 print(f'\nMaior número: {maiorNumero}\nPosição na lista: ', end='')
 # Pegando a posição do maior número de uma lista.
 for pos, vMaiores in enumerate(lista):
     if vMaiores == maiorNumero:
-        print(f'{pos+1}', end='...')
+        print(f'{pos}', end='...')
 
 
 
