@@ -3,50 +3,45 @@
 # [] Mostre a lista ordenada.
 
 
-valores = [0, 0, 0, 0, 0]
+lista = [0, 0, 0, 0, 0]
+listaCopia = []
 
+for i in range(0, 5):
+    valor = int(input('Digite um valor: '))
 
-for item in range(0, 5):
-    valorTeste = int(input('Digite um valor: '))
-    valores[0] = valorTeste
     
 
-
-def filtro(valores):
-    # Trocando as posições do valor 0:
-    if valores[0] > valores[1]:
-        valores[0], valores[1] = valores[1], valores[0]
-    if valores[0] > valores[2]:
-        valores[0], valores[2] = valores[2], valores[0]
-    if valores[0] > valores[3]:
-        valores[0], valores[3] = valores[3], valores[0]
-    if valores[0] > valores[4]:
-        valores[0], valores[4] = valores[4], valores[0]
-        
-    # Trocando as posições do valor 1:
-    if valores[1] > valores[2]:
-        valores[1], valores[2] = valores[2], valores[1]
-    if valores[1] > valores[3]:
-        valores[1], valores[3] = valores[3], valores[1]
-    if valores[1] > valores[4]:
-        valores[1], valores[4] = valores[4], valores[1]
-
-    # Trocando as posições do valor 2:
-    if valores[2] > valores[3]:
-        valores[2], valores[3] = valores[3], valores[2]
-    if valores[2] > valores[4]:
-        valores[2], valores[4] = valores[4], valores[2]
+    # lista[0]
+    if lista[0] > lista[1]:
+        lista[0], lista[1] = lista[1], lista[0] 
+    if lista[0] > lista[2]:
+        lista[0], lista[2] = lista[2], lista[0]
+    if lista[0] > lista[3]:
+        lista[0], lista[3] = lista[3], lista[0]
+    if lista[0] > lista[4]:
+        lista[0], lista[4] = lista[4], lista[0]
     
-    # Trocando as posições do valor 3:
-    if valores[3] > valores[4]:
-        valores[3], valores[4] = valores[4], valores[3]
+    # lista[0]
+    if lista[1] > lista[2]:
+        lista[1], lista[2] = lista[2], lista[1]
+    if lista[1] > lista[3]:
+        lista[1], lista[3] = lista[3], lista[1]
+    if lista[1] > lista[4]:
+        lista[1], lista[4] = lista[4], lista[1]
+
+    # lista[2]
+    if lista[2] > lista[3]:
+        lista[2], lista[3] = lista[3], lista[2]
+    if lista[2] > lista[4]:
+        lista[2], lista[4] = lista[4], lista[2]
     
+    # lista[3]
+    if lista[3] > lista[4]:
+        lista[3], lista[4] = lista[4], lista[3]
     
-    return valores
+    lista.append(valor)
 
 
+    print(f'O valor {valor} foi adicionado a lista na posição {lista.index(valor)}')
 
-
-print(filtro(valores))
     
-
