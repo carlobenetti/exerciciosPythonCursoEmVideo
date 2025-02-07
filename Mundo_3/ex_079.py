@@ -1,22 +1,26 @@
 # Um programa onde o usuário possa digitar vários valores numéricos.
-# [X] Cadastre-os em uma lista.
-# [X] Se o número já exista lá dentro, ele não será adicionado.
-# [X] No final, serão exibidos todos os valores únios digitados, em ordem crescente.
+# [] Cadastre-os em uma lista.
+# [] Se o número já exista lá dentro, ele não será adicionado.
+# [] No final, serão exibidos todos os valores únios digitados, em ordem crescente.
 
 
-valores = []
-counter = 'S'
-novoValor = 0
 
-# Adicionando os valores a lista.
-while counter == 'S':
-    novoValor = int(input('Digite um valor: '))
-    if novoValor not in valores:
-        valores.append(novoValor)
+numeros = list()
+
+while True:
+    n = int(input('Digite um valor: '))
+
+    if n not in numeros:
+        numeros.append(n)
+    else:
+        print('Valor duplicado.')
+
+
+    r = str(input('Quer continuar? [S/N]: '))
+    if r in 'Nn':
+        break
     
-    counter = str(input('Quer continuar? [S/N]: '))[0].upper() #Remover os espaços extras que alguem pode adicionar.
-    
-    
-print(f'Os valores da sua lista em ordem crescente foram: {sorted(valores)}')
-    
-    
+    numeros.sort()
+    print(numeros)
+
+
