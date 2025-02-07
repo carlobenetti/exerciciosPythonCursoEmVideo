@@ -23,4 +23,7 @@ while True:
     numeros.sort()
     print(numeros)
 
+print(numeros)
+
+
 
