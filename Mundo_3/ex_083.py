@@ -1,28 +1,19 @@
 # Um programa em que um usuário usa uma expressão qualquer que usa parenteses.
 # O aplicativo deverá analisar a expressão passada e ver se os parênteses estão na ordem correta. 
 
+expr = str(input('Digite a expressão: '))
+pilha = []
 
-expressao = '(a + b) * c'
-
-stack = []
-
-for charters in expressao:
-    if charters == '(':
-        stack.append(charters)
-    elif charters == ')':
-        if stack:
-            stack.pop()
+for items in expr:
+    if items == '(':
+        pilha.append('(')
+    if items == ')':
+        if len(pilha) > 0:
+            pilha.pop() # Remove o ultimo item da pilha
         else:
-            print(f'Expressão incorreta.')
+            pilha.append(')')
             break
-
-else:
-    if not stack:
-        print("Tudo está ok")
-    else:
-        print(f'Expressão incorreta.')
-
-
-
-
-    
+if len(pilha) == 0:
+    print(f'A expressão está correta.')
+if len(pilha) != 0:
+    print(f'A expressão está incorreta.')  
