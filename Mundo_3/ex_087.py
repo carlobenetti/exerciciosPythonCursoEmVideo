@@ -27,7 +27,6 @@ for linha in range(0, 3):
     print()
 
 
-
 # [] A soma de todos os valores pares digitados.
 print()
 valPares = []
@@ -43,15 +42,6 @@ else:
     print(f'Os valors pares são: {valPares} = {sum(valPares)}')
 
 
-
-
-
-
-
-
-
-
-
 # [] A soma dos valores da terceira coluna.
 valTerceiraColuna = []
 
@@ -60,7 +50,16 @@ for blocoUm in range(0, 3):
 
 print(f'Os valores da terceira coluna são: {valTerceiraColuna} = {sum(valTerceiraColuna)}')
 
+
 # [] O maior valor da segunda linha.
+valoresSegundaLinha = []
+
+for items in range(0, 3):
+    valoresSegundaLinha.append(matriz[items][1])
+
+
+print(f'Os valores da segunda linha são: {valoresSegundaLinha} e o maior valor é {max(valoresSegundaLinha)}')
+
 
 
 

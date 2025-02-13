@@ -21,15 +21,11 @@ for item in range(0, 3):
         print(f'{matriz[item][subitem]}', end=' ')
     print()
 
-# [] A soma dos valores da terceira coluna.
-print()
-valTerceiraColuna = []
+# [] O maior valor da segunda linha.
+valoresSegundaLinha = []
 
-for linha in range(0, 3):
-    valTerceiraColuna.append(matriz[linha][2])
-
+for items in range(0, 3):
+    valoresSegundaLinha.append(matriz[items][1])
 
 
-print(f'Valores da terceira coluna: {valTerceiraColuna} = {sum(valTerceiraColuna)}')
-
-
+print(f'Os valores da segunda linha são: {valoresSegundaLinha} e o maior valor é {max(valoresSegundaLinha)}')
