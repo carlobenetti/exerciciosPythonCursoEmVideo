@@ -5,19 +5,31 @@
 # """
 # print(c.index(5, 1))
 
-counter = 0
-
-matriz = [[[1],[2],[3]], 
-          [[4], [5], [6]], 
-          [[7], [8], [9]]]
-
-for pos, loop in enumerate(matriz):
-    print(f'{pos} {loop[pos]}')
+matriz = [[1,2,3], [4,5,6], [7,8,9]]
 
 
+
+for i in range(0, 3):
+    print(f'{matriz[i]}')
 
 print()
-for loop in matriz:
-    print(loop)
-    print(counter+1)
+print()
+print()
+
+for item in range(0, 3):
+    for subitem in range(0, 3):
+        print(f'{matriz[item][subitem]}', end=' ')
+    print()
+
+# [] A soma dos valores da terceira coluna.
+print()
+valTerceiraColuna = []
+
+for linha in range(0, 3):
+    valTerceiraColuna.append(matriz[linha][2])
+
+
+
+print(f'Valores da terceira coluna: {valTerceiraColuna} = {sum(valTerceiraColuna)}')
+
 
