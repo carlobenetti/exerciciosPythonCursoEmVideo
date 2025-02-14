@@ -1,31 +1,40 @@
-# c = (5, 2, 4, 9, 11, 6, 0, 1, 5, 6)
-# """
-# O index serve para encontrarmos a posição de algum elemento. O primeiro argumento representa o valor que desejo encontrar a posição. O segundo argumento serve para eu definir a partir de qual posição que quero começar a procurar pelo valor.
-# No caso abaixo, eu desejo procurar a posição do segundo valor 5 na tupla. Assim eu peço para o computador procurar a partir do segundo elemento (1)
-# """
-# print(c.index(5, 1))
+matriz = [[0,0,0], [0,0,0], [0,0,0]]
 
-matriz = [[1,2,3], [4,5,6], [7,8,9]]
+spar = mai = scol = 0
 
+for linha in range(0, 3):
+    for coluna in range(0, 3):
+        matriz[linha][coluna] = int(input(f'Digite um valor para {linha} em {coluna}: '))
 
 
-for i in range(0, 3):
-    print(f'{matriz[i]}')
 
+# Matriz original
 print()
-print()
-print()
+print('----------> Matriz crua')
+print(matriz)
 
-for item in range(0, 3):
-    for subitem in range(0, 3):
-        print(f'{matriz[item][subitem]}', end=' ')
+# Matriz normal
+for linha in range(0, 3):
+    for coluna in range(0, 3):
+        print(f'[{matriz[linha][coluna]:^5}]', end='')
+        if matriz[linha][coluna] % 2 == 0:
+            spar += matriz[linha][coluna]
     print()
 
-# [] O maior valor da segunda linha.
-valoresSegundaLinha = []
+print('-=-'*30)
+print(f'A soma dos valores pares é {spar}.')
 
-for items in range(0, 3):
-    valoresSegundaLinha.append(matriz[items][1])
+for linha in range(0, 3):
+    scol += matriz[linha][2]
+print(f'A soma da terceira coluna é: {scol}')
 
 
-print(f'Os valores da segunda linha são: {valoresSegundaLinha} e o maior valor é {max(valoresSegundaLinha)}')
+# Maior valor da segunda linha.
+for contdr in range(0, 3):
+    if contdr == 0:
+        mai = matriz[contdr][1]
+    elif matriz[1][contdr] > mai:
+        mai = matriz[1][contdr]
+print(f'O maior valor da segunda linha é: {mai}')
+
+

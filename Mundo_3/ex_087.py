@@ -58,7 +58,7 @@ for items in range(0, 3):
     valoresSegundaLinha.append(matriz[items][1])
 
 
-print(f'Os valores da segunda linha são: {valoresSegundaLinha} e o maior valor é {max(valoresSegundaLinha)}')
+print(f'Os valores da segunda linha são: {valoresSegundaLinha} e o maior valor é {max(valoresSegundaLinha)}.')
 
 
 
