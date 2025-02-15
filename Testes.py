@@ -1,40 +1,42 @@
-matriz = [[0,0,0], [0,0,0], [0,0,0]]
+# Faça um programa que ajude um jogador da mega sena a criar palpites.
+# O programa vai perguntar quantos jogos serão gerados.
+# E vai sortear 6 números entre 1 a 60 para cada jogo.
+# Cadastrando tudo em uma lista composta.
 
-spar = mai = scol = 0
+from random import randint
+from time import sleep
 
-for linha in range(0, 3):
-    for coluna in range(0, 3):
-        matriz[linha][coluna] = int(input(f'Digite um valor para {linha} em {coluna}: '))
+valor = 0
+numeros = []
+valoresMegaSena = []
+lista = []
+jogosGerados = 0
+continuar = 's'
 
+# Gerando os valores
+jogosGerados = int(input('Quantos jogos você quer gerar? '))
+for jogos in range(0, jogosGerados):
+    for nums in range(0, 6):
+        valor = randint(0, 61)
+        if valor not in numeros:
+            valoresMegaSena.append(valor) #[][]
+    lista.append(sorted(valoresMegaSena[:])) #[]
+    valoresMegaSena.clear()
 
+contdr = 1
+dormir = 1.5
 
-# Matriz original
-print()
-print('----------> Matriz crua')
-print(matriz)
-
-# Matriz normal
-for linha in range(0, 3):
-    for coluna in range(0, 3):
-        print(f'[{matriz[linha][coluna]:^5}]', end='')
-        if matriz[linha][coluna] % 2 == 0:
-            spar += matriz[linha][coluna]
+# Imprimindo a lista
+for items in range(0, len(lista)):
+    print(f'{contdr}o. ', end=' ')
+    contdr += 1
+    for subitems in range(0, 6):
+        print(f'[{lista[items][subitems]:^10}]', end=' ')
     print()
+    sleep(dormir)
+    dormir = max(0.3, dormir * 0.8)
 
-print('-=-'*30)
-print(f'A soma dos valores pares é {spar}.')
-
-for linha in range(0, 3):
-    scol += matriz[linha][2]
-print(f'A soma da terceira coluna é: {scol}')
-
-
-# Maior valor da segunda linha.
-for contdr in range(0, 3):
-    if contdr == 0:
-        mai = matriz[contdr][1]
-    elif matriz[1][contdr] > mai:
-        mai = matriz[1][contdr]
-print(f'O maior valor da segunda linha é: {mai}')
-
+print()
+print()
+print(f'Lista composta = {lista}')
 
