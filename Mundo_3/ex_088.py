@@ -6,31 +6,43 @@
 from random import randint
 from time import sleep
 
+from random import randint
+from time import sleep
+
+
+cont = 0
 lista = []
-jogosGerados = 0
-continuar = 's'
+tot = 1
+jogos = []
+
+print('-=-'*30)
+print('     JOGANDO NA MEGASENA    ')
+print('-=-'*30)
+
+quantJogos = int(input('Quantos jogos você quer jogar? '))
+
+while tot <= quantJogos:
+    cont=0
+
+    while True:
+        num = randint(0, 60)
+        if num not in lista:
+            lista.append(num)
+            cont += 1
+        if cont >= 6:
+            break
+    lista.sort()
+    jogos.append(lista[:])
+    lista.clear()
+    tot += 1
+
+print(f'Os numeros sorteados foram {jogos}')
 
 
-jogosGerados = int(input('Quantos jogos você quer gerar? '))
+print('-=-'*3, f'Sorteando {quantJogos} jogos.', '-=-'*3)
+for i, l in enumerate(jogos):
+    print(f'Jogo {i+1}: {l}')
+    sleep(0.8)
 
-for jogos in range(0, jogosGerados):
-    valoresMegaSena = [randint(0, 61), randint(0, 61), randint(0, 61), randint(0, 61), randint(0, 61), randint(0, 61)]
-    lista.append(valoresMegaSena)
-
-
-contdr = 1
-dormir = 1.5
-
-for items in range(0, len(lista)):
-    print(f'{contdr}o. ', end=' ')
-    contdr += 1
-    for subitems in range(0, 6):
-        print(f'[{lista[items][subitems]:^10}]', end=' ')
-    print()
-    sleep(dormir)
-    dormir = max(0.5, dormir * 0.8)
-
-print()
-print()
-print(f'Lista composta = {lista}')
+print('-=-'*5, 'Boa sorte', '-=-'*5)
 
