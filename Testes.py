@@ -1,41 +1,29 @@
-# Crie um programa que leie o nome e duas notas de vários alunos, guarde tudo em uma lista composta.
-# [] Mostre um boletim contendo a média de cada um.
-# [] Permita que o usuário possa mostrar as notas de cada aluno individualmente.
+prices = [1299.00, 1299.00, 1349.00, 1329.00, 1199.00, 1259.00, 1179.00, 1299.00]
+print(f'\nTamanho da lista: {len(prices)}')
 
-ficha = []
+print('\nPreços em ROL: ')
+print(sorted(prices))
 
+print('\nMenor preço: ')
+print(min(prices))
 
-while True:
-    nome =  str(input('Nome: '))
-    nota1 = float(input('Nota 1: ')) 
-    nota2 = float(input('Nota 2: ')) 
-    media = (nota1 + nota2)/2
+print('\nMaior preço: ')
+print(max(prices))
 
-    ficha.append([nome, [nota1, nota2], media])
+print('\nMédia preço: ')
+print(sum(prices)/len(prices))
 
-    resp = str(input('Quer continuar? [S/N]: '))
-    if resp in 'Nn': 
-        break
-
-
-print('-=-' * 30)
-print(f'{'No.':<4}{"Nome":<10}{'Média:>8'}')
-print('-' * 26)
-
-
-
-for i, a in enumerate(ficha):
-    print(f'{i:<4}{a[0]:<10}{a[2]:8.1f}')
-
-while True:
-    print('-'*35)
-    opc = int(input('Mostrar notas de qual aluno: '))
-    if opc == 999:
-        break
-    if opc <= len(ficha-1):
-        print(f'Notas de {ficha[opc][0]} são {ficha[opc][1]}')
-print('<<< VOLTE SEMPRE >>>')
+print(f'\nModa: {1299.00}')
 
 
 
 
+middle = int(len(prices)/2)-1
+middleAfter = int(len(prices)/2)
+
+print(f'Numero 4 e 5 da lista = {prices[middle]} e {prices[middleAfter]}')
+print(f'\nMediana: {(prices[middle] + prices[middleAfter])/2}')
+
+
+
+# middleBefore = (len(prices)/2)+1
