@@ -1,10 +1,41 @@
 from datetime import date
-usuario = {} # Dados da pessoa
+usuario = [
+    {
+    'nome': 'Carlo Benetti',
+    'idade': 22,
+    'sexo': 'M',
+},
+    {
+    'nome': 'Isabeli',
+    'idade': 28,
+    'sexo': 'F',
+},
+    {
+    'nome': 'Maria Isabel',
+    'idade': 37,
+    'sexo': 'F',
+},
+]
 
-# Pegando o ano atual
-current_date = date.today()
-current_year = current_date.year
+
+print()
 
 
-print(current_year)
-print(current_year - 1999)
+print(f'- Média de idade = {sum(i['idade'] for i in usuario)/len(usuario)}')
+print()
+
+print(f'- As mulheres cadastradas foram:')
+for mulheres in usuario:
+    if mulheres['sexo'] == 'F':
+        print(mulheres['nome'] )
+
+print()
+print(f'- Pessoas a cima da média:')
+for idade in usuario:
+    if idade['idade'] > sum(i['idade'] for i in usuario)/len(usuario):
+        for k, v in idade.items():
+            print(f'{k} = {v};', end=' ')
+        print()
+print()
+
+print('<< ENCERRADO >>')
