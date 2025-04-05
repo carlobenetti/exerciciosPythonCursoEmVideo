@@ -6,6 +6,86 @@
 # [X] Calcule e acresente com a idade, com quantos anos a pessoa vai se aposentar.
 # OBS: Aposentadoria apenas após 35 anos de contribuição.
 
+
+from datetime import datetime
+
+dados = {}
+
+dados['nome'] = str(input('Nome: '))
+nasc = int(input('Ano de Nascimento: '))
+dados['idade'] = datetime.now().year - nasc
+dados['ctps'] = int(input('Carteira de Tranalho (0 não tem): '))
+if dados['ctps'] != 0:
+    dados['contratação'] = int(input('Salário: R$'))
+    dados['aposentadoria'] = ((dados['contratação']+35) - datetime.now().year)
+
+
+print(dados)
+for k, v in dados.items():
+    print(f'  -  {k} em o valor {v}')
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+""" 
 from datetime import date
 usuario = {} # Dados da pessoa
 tabela_usuarios = []
@@ -43,19 +123,6 @@ for l in tabela_usuarios:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 print(f'- Média de idade = {sum(i['idade'] for i in usuario)/len(usuario)}')
 print()
 
@@ -75,7 +142,7 @@ print()
 
 print('<< ENCERRADO >>')
 
-
+ """
 
 
 
