@@ -13,14 +13,14 @@ Olá, Mundo!
 """
 
 
-texto = str(input('Digite a mensagem: '))
+# texto = str(input('Digite a mensagem: '))
 
 
 def escreva(texto): 
-    print(f'{'~'*len(texto)}')
-    print(texto)
-    print(f'{'~'*len(texto)}')
+    print(f'{'~'*(len(texto)+4)}')
+    print(f'  {texto}')
+    print(f'{'~'*(len(texto)+4)}')
 
 print()
-escreva(texto)
-
+escreva('Carlo')
+escreva('batabta fritra')
