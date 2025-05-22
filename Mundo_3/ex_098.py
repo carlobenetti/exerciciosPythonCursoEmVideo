@@ -15,20 +15,26 @@ c) Uma contagem personalizada
 
 from time import sleep
 
-# Contagem de 1 até 10 passando de 1 em 1
-
-def conntagemAte10():
-    count1 = 0
-    for i in range(0, 10):
-        sleep(1)
-        count1 += 1
-        print(f'{count1}')
-
-
-print(f'{conntagemAte10()}')
 
 
 
+def contador(i, f, p):
+    
+    if i < f:
+        cont = i
+        while cont <= f:
+            print(f'{cont} ', end='', flush=True)
+            sleep(0.5)
+            cont += p
+    else:
+        cont = i
+        while cont >= f:
+            print(f'{cont} ', end='', flush=True)
+            cont -= p
 
 
 
+
+
+contador(1, 10, 1)
+contador(10, 0, 2)
