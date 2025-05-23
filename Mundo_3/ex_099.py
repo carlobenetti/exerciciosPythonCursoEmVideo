@@ -10,21 +10,55 @@ def maior(rangeNum, rangeLista):
     menor = 0
     lista = []
     
+    # Embelezamento
+    print(f'{12*'-=-'}')
+    
+    # Analisando os valores passados
+    print('Analisando os valores passados')    
+    
+    # Resultado da lista de números aleatórios
     for i in range(0, rangeLista):
         valorInteiro = randint(0, rangeNum)
+        lista.append(valorInteiro)
         sleep(0.4)
         print(valorInteiro, end=' ', flush=True)
     print()
     
-    for items in lista:
-        if items > maior:
-            maior = items
-        elif items < menor:
-                menor = items
-        else:
-            pass
+    # Mostrando a lista
+    print()
+    print(f'Ou seja: {lista}')
     
-    print(f'O maior: {maior} \nO   menor: {menor}')
+    count = 0
+    
+    if count == 0:
+        for items in lista:
+            if items > maior:
+                menor = maior = items
+    
+    count += 1
+    
+    for items in lista:
+        if items < menor:
+            menor = items
+
+    
+        
+    # Resultado maior e menor valor
+    print(f'O maior: {maior} \nO menor: {menor}')
+
+    # Embelezamento
+    print(f'{12*'-=-'}')
+    
+    
+    
+    
+    
+    
+    
     
 # maior(--número máximo aleatório--, --tamanho da lista--)
 maior(11, 10)
+maior(100, 20)
+
+
+
