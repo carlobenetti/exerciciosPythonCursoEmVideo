@@ -18,11 +18,12 @@ def sorteando():
     print()
     print(f'Lista completa: {lista}')
 
-# A segunda função ira mostrar a soma entre todos os valoes PARES
 
-def somaPar(lista):
+
+# A segunda função ira mostrar a soma entre todos os valoes PARES
+def somaPar(* num):
     print(f'Os valores pares são:')
-    for i in lista:
+    for i in num: 
         sleep(0.3) 
         print(f'{i}', end=' ', flush=True)
 
