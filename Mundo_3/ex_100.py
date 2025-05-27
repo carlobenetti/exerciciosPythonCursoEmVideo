@@ -31,4 +31,3 @@ sorteia(numeros)
 print()
 print(numeros)
 somaPar(numeros)
-    
