@@ -9,6 +9,11 @@ from time import sleep
 
 
 def sorteia(lista):
+    """_summary_
+
+    Args:
+        lista (list): Uma lista de números.
+    """
     for cont in range(0, 5):
         num = randint(0, 10)
         lista.append(num)
