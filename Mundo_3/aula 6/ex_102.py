@@ -24,7 +24,7 @@ def fatorial(n, show=False):
 # Programa principal
 print(fatorial(5, show=True))
 
-    
+
     
     
     
