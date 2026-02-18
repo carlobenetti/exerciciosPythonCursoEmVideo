@@ -27,7 +27,7 @@ def somaPar(lista):
             print(f'{valor}')
         elif valor % 2 == 1:
             print(f'{valor} É impar')
-    # print(f'Somando os valores pares de {lista}, temos {soma}')
+# print(f'Somando os valores pares de {lista}, temos {soma}')
 
     
 # Código principal
@@ -36,3 +36,4 @@ sorteia(numeros)
 print()
 print(numeros)
 somaPar(numeros)
+
